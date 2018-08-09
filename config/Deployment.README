@@ -1,0 +1,32 @@
+# How to deploy a rails app to a remote server
+
+### Installing ruby on your ubuntu server
+```cd
+sudo apt-get update
+sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+rbenv install -l
+rbenv install 'version-you-want'
+rbenv global 'version-you-want'
+ruby -v```
+
+### Working with gems
+`echo "gem: --no-document" > ~/.gemrc`
+`gem install bundler`
+
+### Adding a new deploy user
+```
+sudo su
+adduser deploy --disabled-password
+sudo su - deploy
+pwd # make sure you're on /home/deploy
+mkdir .ssh
+chmod 700 .ssh
+touch .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+vim .ssh/authorized_keys
+```
