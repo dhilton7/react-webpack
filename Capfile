@@ -5,6 +5,8 @@ require "capistrano/setup"
 require "capistrano/deploy"
 
 require 'capistrano/bundler'
+require 'capistrano/nvm'
+require 'capistrano/yarn'
 # require 'capistrano/rvm'
 require 'capistrano/rbenv'
 require 'capistrano/rails/assets' # for asset handling add

@@ -48,6 +48,8 @@ group :development do
   gem 'capistrano-rails', '1.3.1', require: false
   gem 'capistrano-rbenv', '2.1.3', require: false
   gem 'capistrano-bundler', require: false
+  gem 'capistrano-nvm', require: false
+  gem 'capistrano-yarn', require: false
   gem 'capistrano3-puma'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
