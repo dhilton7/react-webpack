@@ -28,8 +28,15 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/credentials.yml.enc
 /public/packs
 /public/packs-test
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+.idea/*
+
+# people don't need to see deploy setup
+/config/deploy/*
+/config/deploy.rb

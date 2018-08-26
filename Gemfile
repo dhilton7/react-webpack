@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '5.2.1'
 gem 'webpacker', '~> 3.5'
 
 # Use sqlite3 as the database for Active Record
@@ -44,12 +44,11 @@ group :development, :test do
 end
 
 group :development do
-  # deployments
-  gem "capistrano", "~> 3.10", require: false
-  gem "capistrano-rails", "~> 1.4", require: false
-  gem 'capistrano-rbenv', '~> 2.1', require: false
+  gem 'capistrano', '3.10.1'
+  gem 'capistrano-rails', '1.3.1', require: false
+  gem 'capistrano-rbenv', '2.1.3', require: false
   gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
+  gem 'capistrano3-puma'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -61,10 +60,10 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
-  gem 'selenium-webdriver'
+  # gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
